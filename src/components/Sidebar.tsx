@@ -12,6 +12,15 @@ const GET_LESSONS_QUERY = gql`
   }
 `;
 
+interface GetLessonsQueryResponse {
+  lessons: {
+    id: string;
+    title: string;
+    slug: string;
+    availableAt: string;
+    lessonType: "live" | "class";
+  }[];
+}
             <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500 block">
                 Cronograma de aulas
             </span>
